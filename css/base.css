@@ -1,0 +1,291 @@
+/*base styles*/
+:root {
+    --primary-color: hsl(243, 87%, 12%);
+    --secondary-color: hsl(238, 22%, 44%);
+    --accent-color: hsl(224, 93%, 58%);
+    --accent-color-light: hsl(170, 45%, 43%);
+    --light-grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+    --primary-font-family: 'Raleway', sans-serif;
+    ;
+    --secondary-font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    display: grid;
+    color: var(--secondary-color);
+}
+
+.font1 {
+    font-size: 4rem;
+}
+
+.font2 {
+    font-size: 3rem;
+}
+
+.font3 {
+    font-size: 2rem;
+}
+
+.font4 {
+    font-size: 1.6rem;
+}
+
+.font5{
+    font-size: 1.2rem;
+}
+
+.p-tb {
+    padding: 5rem 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.btn {
+    width: 100%;
+    background: var(--accent-color);
+    border-radius: 4px;
+    border: none;
+    letter-spacing: 1px;
+    padding: 1.2rem 2.5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: var(--primary-font-family);
+    cursor: pointer;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 4px;
+    padding: 1.2rem 2.5rem;
+    border: 1px solid #333;
+    font-size: 1.6rem;
+    font-family: var(--primary-font-family);
+    box-sizing: border-box;
+}
+
+form {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.grid-m {
+    display: grid;
+    grid-gap: 2rem;
+    align-content: center;
+    justify-content: center;
+}
+
+/*custom styles*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+}
+
+.header,.hero-section,
+.how-it-works,
+.register,
+.footer {
+    grid-column: 2;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-column-gap: 4rem;
+    font-family: var(--primary-font-family);
+    padding: 2rem 0;
+}
+
+.logo,
+.footer-logo {
+    max-width: 14rem;
+}
+
+.footer-logo img {
+    filter: invert(97%) sepia(0%) saturate(13%) hue-rotate(261deg) brightness(104%) contrast(104%);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    grid-column-gap: 2rem;
+}
+
+.nav a {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.title {
+    font-family: var(--primary-font-family);
+    color: var(--primary-color);
+}
+
+.bg-light {
+    background: var(--light-grayish-blue);
+}
+
+.bg-secondary,
+.bg-primary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+}
+
+.link,
+.phone,
+.mail {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-column-gap: .5rem;
+}
+
+.link a{
+    color: var(--accent-color-light);
+}
+
+.phone,
+.mail,
+.footer-nav a,
+.social-icons i,
+.footer-widget a ,.register .title{
+    color: #fff;
+    justify-content: start;
+}
+
+.icon {
+    max-width: 16px;
+}
+
+.how-it-works .card {
+   background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px #e6e0e0;
+    font-size: 1.2rem;
+    grid-gap: 1rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 52px;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: auto 5fr;
+    grid-column-gap: 1.2rem;
+}
+
+.form-control.register-input {
+    border: none;
+}
+
+.register {
+    padding: 5rem 2rem;
+}
+
+.footer,
+.footer-content {
+    display: grid;
+    grid-gap: 3rem;
+    line-height: 2;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-column-gap: 2rem;
+}
+
+.social-icons .social-icon a {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Tab & Desktop view*/
+@media (min-width: 767px) {
+    .grid-t {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .img-wrap {
+        grid-column: 2;
+        grid-row: 1
+    }
+
+    html {
+        font-size: 75%;
+    }
+
+    body {
+        text-align: left;
+    }
+
+    .btn{
+        width: auto;
+    }
+
+    .link{
+        justify-content: start;
+    }
+
+    .how-it-works .card{
+        width: 50%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+}
